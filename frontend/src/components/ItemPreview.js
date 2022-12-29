@@ -29,6 +29,13 @@ const ItemPreview = (props) => {
     }
   };
 
+  let userProvidedImageUrl="item.image"
+  const imgElement = document.getElementById("item.image");
+    if (userProvidedImageUrl) {
+    imgElement.src = userProvidedImageUrl;
+    }
+
+
   return (
     <div
       className="card bg-dark border-light p-3"
@@ -36,8 +43,9 @@ const ItemPreview = (props) => {
       id={`item_${item.slug}`}
     >
       <img
+        src="placeholder.png"
         alt="item"
-        src={item.image}
+        id="item.image"
         className="card-img-top item-img"
         style={{ borderRadius: "20px" }}
       />
