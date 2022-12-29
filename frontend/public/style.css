@@ -52,7 +52,16 @@ body {
   z-index: 1041;
   background-size: cover;
 }
-.image{
-  display: inline-grid;
-  grid-template-columns: repeat(2, 1fr);
+.item-catalog{
+  display: inline-grid !important;
+  grid-template-columns: auto auto auto;
+  padding-inline: 10px;
+}
+.item{
+  display: inline-grid !important;
+  grid-template-columns: auto auto auto;
+}
+.img{
+  width: 3rem;
+  height: 3rem;
 }
