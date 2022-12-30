@@ -29,11 +29,6 @@ const ItemPreview = (props) => {
     }
   };
 
-  let userProvidedImageUrl="item.image"
-  const imgElement = document.getElementById("item.image");
-    if (userProvidedImageUrl) {
-    imgElement.src = userProvidedImageUrl;
-    }
 
 
   return (
@@ -45,7 +40,6 @@ const ItemPreview = (props) => {
       <img
         src="placeholder.png"
         alt="item"
-        id="item.image"
         className="card-img-top item-img"
         style={{ borderRadius: "20px" }}
       />
