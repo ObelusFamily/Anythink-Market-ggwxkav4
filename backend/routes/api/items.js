@@ -156,7 +156,7 @@ router.post("/", auth.required, function(req, res, next) {
     .catch(next);
 });
 
-// return a item
+// return an item
 router.get("/:item", auth.optional, function(req, res, next) {
   Promise.all([
     req.payload ? User.findById(req.payload.id) : null,
@@ -184,6 +184,8 @@ router.put("/:item", auth.required, function(req, res, next) {
 
       if (typeof req.body.item.image !== "undefined") {
         req.item.image = req.body.item.image;
+      } else {
+        req.item.image = "placeholder.png"
       }
 
       if (typeof req.body.item.tagList !== "undefined") {
